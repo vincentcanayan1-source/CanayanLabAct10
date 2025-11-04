@@ -33,6 +33,26 @@ Public Class Form1
     End Sub
 
     Private Sub Sort_Click(sender As Object, e As EventArgs) Handles Sort.Click
+        ListBox1.Items.Clear()
+
+        If Not File.Exists(filePath) Then
+            MessageBox.Show("No numbers found. Please add some first.")
+            Return
+        End If
+        Dim numbers As New List(Of Integer)
+        Using reader As New StreamReader(filePath)
+            While Not reader.EndOfStream
+                Dim line As String = reader.ReadLine()
+                Dim num As Integer
+                If Integer.TryParse(line, num) Then
+                    numbers.Add(num)
+                End If
+            End While
+        End Using
+        Dim sortedNumbers = numbers.OrderBy(Function(n) n)
+        For Each n In sortedNumbers
+            ListBox1.Items.Add(n)
+        Next
 
     End Sub
 End Class

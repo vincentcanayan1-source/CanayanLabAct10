@@ -22,29 +22,30 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Read = New System.Windows.Forms.Button()
+        Me.Sort = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Write = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'Read
         '
-        Me.Button1.Location = New System.Drawing.Point(394, 62)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Read"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Read.Location = New System.Drawing.Point(394, 74)
+        Me.Read.Name = "Read"
+        Me.Read.Size = New System.Drawing.Size(75, 23)
+        Me.Read.TabIndex = 0
+        Me.Read.Text = "Read"
+        Me.Read.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Sort
         '
-        Me.Button2.Location = New System.Drawing.Point(580, 146)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Sort.Location = New System.Drawing.Point(394, 204)
+        Me.Sort.Name = "Sort"
+        Me.Sort.Size = New System.Drawing.Size(75, 23)
+        Me.Sort.TabIndex = 1
+        Me.Sort.Text = "Sort"
+        Me.Sort.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -56,20 +57,30 @@ Partial Class Form1
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(535, 36)
+        Me.ListBox1.Location = New System.Drawing.Point(394, 103)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(120, 95)
         Me.ListBox1.TabIndex = 3
+        '
+        'Write
+        '
+        Me.Write.Location = New System.Drawing.Point(511, 36)
+        Me.Write.Name = "Write"
+        Me.Write.Size = New System.Drawing.Size(75, 23)
+        Me.Write.TabIndex = 4
+        Me.Write.Text = "Write"
+        Me.Write.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Write)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Sort)
+        Me.Controls.Add(Me.Read)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -77,8 +88,9 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Read As Button
+    Friend WithEvents Sort As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Write As Button
 End Class

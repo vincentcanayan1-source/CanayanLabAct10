@@ -20,12 +20,12 @@ Public Class Form1
     End Sub
 
     Private Sub Read_Click(sender As Object, e As EventArgs) Handles Read.Click
-        ListBox1.Items.Clear()
+        List.Items.Clear()
         Using reader As New StreamReader(filePath)
             Dim line As String
             line = reader.ReadLine()
             While (line IsNot Nothing)
-                ListBox1.Items.Add(line)
+                List.Items.Add(line)
                 line = reader.ReadLine()
             End While
         End Using
@@ -33,7 +33,7 @@ Public Class Form1
     End Sub
 
     Private Sub Sort_Click(sender As Object, e As EventArgs) Handles Sort.Click
-        ListBox1.Items.Clear()
+        List.Items.Clear()
 
         If Not File.Exists(filePath) Then
             MessageBox.Show("No numbers found. Please add some first.")
@@ -51,7 +51,7 @@ Public Class Form1
         End Using
         Dim sortedNumbers = numbers.OrderBy(Function(n) n)
         For Each n In sortedNumbers
-            ListBox1.Items.Add(n)
+            List.Items.Add(n)
         Next
 
     End Sub

@@ -25,7 +25,7 @@ Partial Class Form1
         Me.Read = New System.Windows.Forms.Button()
         Me.Sort = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.List = New System.Windows.Forms.ListBox()
         Me.Write = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
@@ -56,13 +56,13 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 2
         '
-        'ListBox1
+        'List
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(22, 73)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(156, 95)
-        Me.ListBox1.TabIndex = 3
+        Me.List.FormattingEnabled = True
+        Me.List.Location = New System.Drawing.Point(22, 73)
+        Me.List.Name = "List"
+        Me.List.Size = New System.Drawing.Size(156, 95)
+        Me.List.TabIndex = 3
         '
         'Write
         '
@@ -76,7 +76,7 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Write)
-        Me.GroupBox1.Controls.Add(Me.ListBox1)
+        Me.GroupBox1.Controls.Add(Me.List)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Sort)
         Me.GroupBox1.Controls.Add(Me.Read)
@@ -104,7 +104,7 @@ Partial Class Form1
     Friend WithEvents Read As Button
     Friend WithEvents Sort As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents List As ListBox
     Friend WithEvents Write As Button
     Friend WithEvents GroupBox1 As GroupBox
 End Class

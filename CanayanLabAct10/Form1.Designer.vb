@@ -75,6 +75,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox1.Controls.Add(Me.Write)
         Me.GroupBox1.Controls.Add(Me.List)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
